@@ -28,6 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # Information
 
-<!-- Atividade realizada por José Roberto Lisboa S. Filho. AMS FATEC. Publicada em /03/03/2024/. -->
-<!-- Utilizei Angular Typescript, NodeJS, HTML e CSS. -->
+Atividade realizada por José Roberto Lisboa S. Filho. AMS FATEC. Publicada em /03/03/2024/.
+Utilizei Angular Typescript, NodeJS, HTML e CSS.
 Instalar Angular, NodeJS e Angular Universal.
