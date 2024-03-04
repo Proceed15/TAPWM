@@ -1,0 +1,35 @@
+.fixed {
+    position: fixed;
+    width: 100%;
+    transition: 0.2s linear;
+    top: 0px;
+}
+
+.nofixed {
+    position: static;
+    transition: 0.2s linear;
+    top: -50px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-item {
+    margin-right: 10px;
+  }
+
+  .nav-link {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 18px 18px;
+  }
+
+  .nav-link:hover {
+    color: #ffc107;
+  }
