@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--By: José Roberto Lisboa S. Filho.-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Média é feita Aqui</title>
+    <script>
+        var nota1, nota2, nota3;
+        alert("Bem-Vindo! Veja Aqui a Média Aritmética de suas Notas.");
+        nota1 = parseFloat(prompt("Insira sua primeira nota: "));
+        nota2 = parseFloat(prompt("Insira sua segunda nota: "));
+        nota3 = parseFloat(prompt("Insira sua terceira nota: "));
+
+        alert("Confira se suas notas são, respectivamente: " + nota1 + "," + nota2 + "," + nota3 + ".")
+        var decisao = confirm("Clique em ok se estiverem corretas.");
+        if (decisao){
+            var Amedia = (nota1 + nota2 + nota3)/3;
+            alert("Sua Média Aritmética: " + Amedia);
+        }
+        else{
+            alert("Faça novamente, recarregue essa página.")
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
