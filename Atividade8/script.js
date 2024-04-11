@@ -14,7 +14,7 @@ function calcularEExibirResultados() {
 const idades = respostas.map(resposta => resposta.idade);
 const somaIdades = idades.reduce((acc, idade) => acc + idade, 0);
  
-const mediaIdade = somaIdades / respostas.length;
+const mediaIdade = (somaIdades / respostas.length).toFixed(0);;
 document.getElementById("mediaIdade").textContent = mediaIdade;
  
 const idadeMaisVelha = Math.max(...idades);
@@ -27,7 +27,7 @@ const qtdPessimo = respostas.filter(resposta => resposta.opiniao === 1).length;
 document.getElementById("qtdPessimo").textContent = qtdPessimo;
  
 const qtdOtimoBom = respostas.filter(resposta => resposta.opiniao >= 3).length;
-const porcentagemOtimoBom = (qtdOtimoBom / respostas.length) * 100;
+const porcentagemOtimoBom = ((qtdOtimoBom / respostas.length) * 100).toFixed(0);
 document.getElementById("porcentagemOtimoBom").textContent = porcentagemOtimoBom;
  
 const qtdMulheres = respostas.filter(resposta => resposta.sexo === "feminino").length;
