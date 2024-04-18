@@ -6,7 +6,7 @@ const sexo = document.querySelector('input[name="sexo"]:checked').value;
 const opiniao = parseInt(document.getElementById("opiniao").value);
 const arrFrobj = Object.keys(respostas);
 const last = arrFrobj.slice(-1);
-++last[1];
+//++last[1];
 //const last = respostas[respostas.length - 1];
 //const QuerySel = document.querySelectorAll(arrFrobj).length;
 //let numRes = 0;
