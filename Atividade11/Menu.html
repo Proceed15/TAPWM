@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluções Atividade 11</title>
+    <h1>Menu das Soluções da Atividade 11</h1>
+    <script src="Atv11Part1.js"></script>
+    <script src="Atv11Part2.js"></script>
+    <script src="Atv11Part3.js"></script>
+</head>
+
+<body>
+    <h2>Digite 4 Números:</h2>
+    <form id="Submitted">
+        <input type="number" name="num1" id="num1" required></input>
+        <input type="number" name="num2" id="num2" required></input>
+        <input type="number" name="num3" id="num3" required></input>
+        <input type="number" name="num4" id="num4" required></input>
+        <!--<input type="button"
+            onclick="add(document.getElementById(1).value, 
+            document.getElementById(2).value, 
+            document.getElementById(3).value, 
+            document.getElementById(4))">-->
+        <input type="button" value="Enviar" onclick="IsData(); IsData2(); IsData3()" >
+    </form>
+
+    <h2>Primeira Solução</h2>
+    <script src="Atv11Part1.js"></script>
+    <button type="button" onclick="IsBigger()">Agora Veja a Solução 1</button>
+    <h2>Segunda Solução</h2>
+    <script src="Atv11Part2.js"></script>
+    <button type="button" onclick="IsMaximized()">Agora Veja a Solução 2</button>
+    <h2>Terceira Solução</h2>
+    <script src="Atv11Part3.js"></script>
+    <button type="button" onclick="BeCrescent()">Agora Veja a Solução 3</button>
+
+
+    <h3>Cada Solução é proposta a um exercício específico (1,2,3).</h3>
+</body>
+
+</html>
