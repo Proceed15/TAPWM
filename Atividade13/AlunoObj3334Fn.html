@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 13 + Objeto Aluno de 3 Formas Diferentes</title>
+</head>
+<body>
+    <h1>Olá! Aqui há 3(4) objetos do tipo Aluno</h1>
+    <h2>As Propriedades de cada Objeto Aluno (+Bônus) são:</h2>
+    <h3>RA e Nome (e número do Laboratório|lab no Bônus), ambos os valores já preenchidos em cada instância.</h3>
+    <script>
+        // Criando Objetos usando:
+        // 6: função Construtora, Criando um Objeto a Partir de uma Função Construtora...
+        function Aluno2() {
+            var ra;
+            var nome;
+            this.setRa = function (value) {
+                this.ra = value;
+            }
+            this.getRa = function () {
+                return this.ra;
+            }
+            this.setNome = function (value) {
+                this.nome = value;
+            }
+            this.getNome = function () {
+                return this.nome;
+            }
+        }
+        var Aluno6 = new Aluno2();
+        Aluno6.setNome("Beatriz");
+        Aluno6.setRa("234");
+        alert("Criando Objeto usando Função Construtora: ra=" + Aluno6.getRa() + " nome=" + Aluno6.getNome());
+
+        // 8: Array, a partir do ES10 podemos usar um Array e o Converter em um Objeto...
+        const arr = [['código', 1], ['nome', "João"], ['idade', 23]];
+        const obj = Object.fromEntries(arr);
+        alert("Criando Objeto a Partir de um Array: " + JSON.stringify(obj));
+
+        // 9: Classe, Criando um objeto a partir de uma classe...
+        class Aluno1 {
+            constructor() {
+                this._ra;
+                this._nome;
+            }
+            setNome(value) {
+                this._nome = value;
+            }
+            getNome() {
+                return this._nome;
+            }
+            setRa(value) {
+                this._ra = value;
+            }
+            getRa() {
+                return this._ra;
+            }
+        }
+        var objAluno = new Aluno1();
+        objAluno.setNome("Iran");
+        objAluno.setRa('123');
+        alert(`Criando Objeto a Partir de uma Classe: nome=${objAluno.getNome()} ra=${objAluno.getRa()}`)
+
+        // 10: Herança extendida, Criando Objeto a Partir de Herança Estendida...
+        class AlunoADS1 extends Aluno1 {
+            constructor() {
+                super();
+                this._numLab;
+            }
+            setNumLab(value) {
+                this._numLab = value;
+            }
+            getNumlab() {
+                return this._numLab;
+            }
+        }
+        var objAlunoADS = new AlunoADS1();
+        objAlunoADS.setNome("Enrico");
+        objAlunoADS.setRa("123");
+        objAlunoADS.setNumLab(6);
+        alert(`Criando um Objeto a Partir de Herança Extendida:
+        nome=${objAlunoADS.getNome()} 
+        ra=${objAlunoADS.getRa()} 
+        numlab=${objAlunoADS.getNumlab()}`);
+    </script>
+</body>
+</html>
