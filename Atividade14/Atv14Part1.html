@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade 14 + Base, Altura e Área de um Retângulo</title>
 </head>
 <body>
@@ -15,6 +15,41 @@
         <input type="number" name="y" id="y" required>
         <p></p>
     </form>
-    <script></script> 
+    <script>
+        function Data() {
+            const x = document.getElementById("x").value;
+            const y = document.getElementById("y").value;
+            alert("Dados Salvos")
+        }
+        function Return(){
+        function AreaRetangulo() {
+            var x
+            var y
+            this.setx = function (value) {
+                this.x = value;
+            }
+            this.getx = function () {
+                return this.x;
+            }
+            this.sety = function (value) {
+                this.y = value;
+            }
+            this.gety = function () {
+                return this.y;
+            }
+        }
+        AreaRetangulo6.sety(document.getElementById("y"));
+        AreaRetangulo6.setx(document.getElementById("x"));
+        var AreaRetangulo6 = new AreaRetangulo();
+        alert("Criando Objeto usando Função Construtora: x=" + AreaRetangulo6.getx() + " y=" + AreaRetangulo6.gety());
+        }
+        /*
+        AreaRetangulo6.sety("3");
+        AreaRetangulo6.setx("4");
+        */
+        //alert("Criando Objeto usando Função Construtora: x=" + AreaRetangulo6.getx() + " y=" + AreaRetangulo6.gety());
+    </script>
+    <button onclick="Data()">Calcular a Área do Retângulo</button>
+    <button onclick="Return()">Retornar os Resultados</button>
 </body>
 </html>
