@@ -6,6 +6,10 @@
     <title>Atividade 14 + Conta Corrente e Poupança</title>
 </head>
 <body>
+    <h1>Dados da Conta</h1>
+    <h2>Clicando veja um Exemplo</h2>
+    <h3>Função Construtora Conta com herança extendida a Poupança e Conta Corrente</h3>
+<!--
     <form>
         <label for="name">Nome</label>
         <input type="text" name="name" id="name" required>
@@ -19,6 +23,63 @@
         <input type="number" max="999" name="Balance" id="Balance" required>
         <p></p>
     </form>
-    <script></script>
+-->
+    <script>
+        function Conta() {
+            /*
+            var N = document.getElementById("name").value;
+            var B = document.getElementById("BankKC").value;
+            var K = document.getElementById("numKC").value;
+            var Lan = document.getElementById("Balance").value;
+            alert("Dados Salvos");
+            */
+            var name
+            var BankKC
+            var numKC
+            var Balance
+
+            this.setNC = function (value) {
+                this.numKC = value;
+            }
+            this.getNC = function () {
+                return this.numKC;
+            }
+            this.setName = function (value) {
+                this.name = value;
+            }
+            this.getName = function () {
+                return this.name;
+            }
+            this.setBankKC = function (value) {
+                this.BankKC = value;
+            }
+            this.getBankKC = function () {
+                return this.BankKC;
+            }
+            this.setBalance = function (value) {
+                this.Balance = value;
+            }
+            this.getBalance = function () {
+                return this.Balance;
+            }
+            this.Return = function() {
+                alert("Criando Conta usando Função Construtora: \n" 
+                + "Conta: \n"
+                + Conta6.getName() + "\n" 
+                + Conta6.getNC() + "\n" 
+                + Conta6.getBankKC() + "\n" 
+                + Conta6.getBalance());
+            }
+        }
+        var Conta6 = new Conta();
+        Conta6.setName("Derrick");
+        Conta6.setNC("133319");
+        Conta6.setBankKC("1.333.19");
+        Conta6.setBalance("1.000.000,00$$$$");
+        function ReturnConta() {
+            Conta6.Return();
+        }
+    </script>
+    <button onclick="ReturnConta()">Retornar as Informações</button>
 </body>
 </html>

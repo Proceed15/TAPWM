@@ -16,40 +16,22 @@
         <p></p>
     </form>
     <script>
-        function Data() {
-            const x = document.getElementById("x").value;
-            const y = document.getElementById("y").value;
-            alert("Dados Salvos")
+        function Data(x, y) {
+            //alert("Dados Salvos")
+            this.x = x;
+            this.y = y;
+            this.ShowData = function () {
+                var areaR = x * y;
+                return "Área do Retângulo = " + areaR + " ao Quadrado";
+            }
         }
         function Return(){
-        function AreaRetangulo() {
-            var x
-            var y
-            this.setx = function (value) {
-                this.x = value;
-            }
-            this.getx = function () {
-                return this.x;
-            }
-            this.sety = function (value) {
-                this.y = value;
-            }
-            this.gety = function () {
-                return this.y;
-            }
+            var Ax = document.getElementById("x").value;
+            var By = document.getElementById("y").value;
+            var ECMA6 = new Data(Ax, By);
+            alert("Cálculos com Função Construtora: " + ECMA6.ShowData());
         }
-        AreaRetangulo6.sety(document.getElementById("y"));
-        AreaRetangulo6.setx(document.getElementById("x"));
-        var AreaRetangulo6 = new AreaRetangulo();
-        alert("Criando Objeto usando Função Construtora: x=" + AreaRetangulo6.getx() + " y=" + AreaRetangulo6.gety());
-        }
-        /*
-        AreaRetangulo6.sety("3");
-        AreaRetangulo6.setx("4");
-        */
-        //alert("Criando Objeto usando Função Construtora: x=" + AreaRetangulo6.getx() + " y=" + AreaRetangulo6.gety());
     </script>
-    <button onclick="Data()">Calcular a Área do Retângulo</button>
-    <button onclick="Return()">Retornar os Resultados</button>
+    <button onclick="Return()">Calcular a Área do Retângulo</button>
 </body>
 </html>
