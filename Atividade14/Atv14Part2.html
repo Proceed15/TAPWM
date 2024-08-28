@@ -71,13 +71,84 @@
                 + Conta6.getBalance());
             }
         }
+
+        class Poupanca extends Conta {
+            constructor () {
+                super();
+                this.DataValidade;
+                this.Juros;
+            }
+            setDV(value) {
+                this.DataValidade = value;
+            }
+            getDV() {
+                return this.DataValidade;
+            }
+            setJuros(value){
+                this.Juros = value;
+            }
+            getJuros(){
+                return this.Juros;
+            }
+            Return = function() {
+                alert("Criando Poupança usando Função Construtora: \n" 
+                + "Conta: \n"
+                + Conta3.getName() + "\n" 
+                + Conta3.getNC() + "\n" 
+                + Conta3.getBankKC() + "\n" 
+                + Conta3.getBalance() + "\n"
+                + Conta3.getDV() + "\n"
+                + Conta3.getJuros());
+            }
+        }
+
+        class ContaCorrente extends Conta {
+            constructor () {
+                super();
+                this.SaldoEspecial;
+            }
+            setSdEsp(value) {
+                this.SaldoEspecial = value;
+            }
+            getSdEsp(){
+                return this.SaldoEspecial;
+            }
+            Return = function() {
+                alert("Criando Conta Corrente usando Função Construtora: \n"
+                + "Conta: \n"
+                + Conta9.getName() + "\n"
+                + Conta9.getNC() + "\n"
+                + Conta9.getBankKC() + "\n"
+                + Conta9.getBalance() + "\n"
+                + Conta9.getSdEsp());            
+            }
+        }
+
         var Conta6 = new Conta();
         Conta6.setName("Derrick");
         Conta6.setNC("133319");
         Conta6.setBankKC("1.333.19");
         Conta6.setBalance("1.000.000,00$$$$");
+
+        var Conta3 = new Poupanca();
+        Conta3.setName("Darriel");
+        Conta3.setNC("243675869");
+        Conta3.setBankKC("2.436.75.869");
+        Conta3.setBalance("2.000.00,00$$");
+        Conta3.setDV("2025-01-01");
+        Conta3.setJuros(0.05);
+
+        var Conta9 = new ContaCorrente();
+        Conta9.setName("José Filho");
+        Conta9.setNC("333666999");
+        Conta9.setBankKC("333.666.999");
+        Conta9.setBalance("333.333.333,33$$$$$$$");
+        Conta9.setSdEsp(999999);
+
         function ReturnConta() {
             Conta6.Return();
+            Conta3.Return();
+            Conta9.Return();
         }
     </script>
     <button onclick="ReturnConta()">Retornar as Informações</button>
