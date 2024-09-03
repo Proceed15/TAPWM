@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 15 + Base, Altura e Área de um Retângulo</title>
+</head>
+<body>
+    <h1></h1>
+    <form id="FormHasData">
+        <label for="x">Base do Retângulo</label>
+        <input type="number" name="x" id="x" required>
+        <p></p>
+        <label for="y">Altura do Retângulo</label>
+        <input type="number" name="y" id="y" required>
+        <p></p>
+    </form>
+    <script>
+        function Data(x, y) {
+            //alert("Dados Salvos")
+            this.x = x;
+            this.y = y;
+            this.ShowData = function () {
+                var areaR = x * y;
+                return "Área do Retângulo = " + areaR + " ao Quadrado";
+            }
+        }
+        function Return(){
+            var Ax = document.getElementById("x").value;
+            var By = document.getElementById("y").value;
+            var ECMA6 = new Data(Ax, By);
+            alert("Cálculos com Função Construtora: " + ECMA6.ShowData());
+        }
+    </script>
+    <button onclick="Return()">Calcular a Área do Retângulo</button>
+</body>
+</html>

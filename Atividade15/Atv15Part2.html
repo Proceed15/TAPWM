@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 15 + Conta Corrente e Poupança</title>
+</head>
+<body>
+    <h1>Dados da Conta</h1>
+    <h2>Clicando veja um Exemplo</h2>
+    <h3>Função Construtora Conta com herança extendida a Poupança e Conta Corrente</h3>
+<!--
+    <form>
+        <label for="name">Nome</label>
+        <input type="text" name="name" id="name" required>
+        <p></p>
+        <label for="BankKC">Número do Banco</label>
+        <input type="number" name="BankKC" id="BankKC" required>
+        <label for="numKC">Número da Conta</label>
+        <input type="number" name="numKC" id="numKC" required>
+        <p></p>
+        <label for="Balance">Saldo da Conta</label>
+        <input type="number" max="999" name="Balance" id="Balance" required>
+        <p></p>
+    </form>
+-->
+    <script>
+        function Conta() {
+            /*
+            var N = document.getElementById("name").value;
+            var B = document.getElementById("BankKC").value;
+            var K = document.getElementById("numKC").value;
+            var Lan = document.getElementById("Balance").value;
+            alert("Dados Salvos");
+            */
+            var name
+            var BankKC
+            var numKC
+            var Balance
+
+            this.setNC = function (value) {
+                this.numKC = value;
+            }
+            this.getNC = function () {
+                return this.numKC;
+            }
+            this.setName = function (value) {
+                this.name = value;
+            }
+            this.getName = function () {
+                return this.name;
+            }
+            this.setBankKC = function (value) {
+                this.BankKC = value;
+            }
+            this.getBankKC = function () {
+                return this.BankKC;
+            }
+            this.setBalance = function (value) {
+                this.Balance = value;
+            }
+            this.getBalance = function () {
+                return this.Balance;
+            }
+            this.Return = function() {
+                alert("Criando Conta usando Função Construtora: \n" 
+                + "Conta: \n"
+                + Conta6.getName() + "\n" 
+                + Conta6.getNC() + "\n" 
+                + Conta6.getBankKC() + "\n" 
+                + Conta6.getBalance());
+            }
+        }
+
+        class Poupanca extends Conta {
+            constructor () {
+                super();
+                this.DataValidade;
+                this.Juros;
+            }
+            setDV(value) {
+                this.DataValidade = value;
+            }
+            getDV() {
+                return this.DataValidade;
+            }
+            setJuros(value){
+                this.Juros = value;
+            }
+            getJuros(){
+                return this.Juros;
+            }
+            Return = function() {
+                alert("Criando Poupança usando Função Construtora: \n" 
+                + "Conta: \n"
+                + Conta3.getName() + "\n" 
+                + Conta3.getNC() + "\n" 
+                + Conta3.getBankKC() + "\n" 
+                + Conta3.getBalance() + "\n"
+                + Conta3.getDV() + "\n"
+                + Conta3.getJuros());
+            }
+        }
+
+        class ContaCorrente extends Conta {
+            constructor () {
+                super();
+                this.SaldoEspecial;
+            }
+            setSdEsp(value) {
+                this.SaldoEspecial = value;
+            }
+            getSdEsp(){
+                return this.SaldoEspecial;
+            }
+            Return = function() {
+                alert("Criando Conta Corrente usando Função Construtora: \n"
+                + "Conta: \n"
+                + Conta9.getName() + "\n"
+                + Conta9.getNC() + "\n"
+                + Conta9.getBankKC() + "\n"
+                + Conta9.getBalance() + "\n"
+                + Conta9.getSdEsp());            
+            }
+        }
+
+        var Conta6 = new Conta();
+        Conta6.setName("Derrick");
+        Conta6.setNC("133319");
+        Conta6.setBankKC("1.333.19");
+        Conta6.setBalance("1.000.000,00$$$$");
+
+        var Conta3 = new Poupanca();
+        Conta3.setName("Darriel");
+        Conta3.setNC("243675869");
+        Conta3.setBankKC("2.436.75.869");
+        Conta3.setBalance("2.000.00,00$$");
+        Conta3.setDV("2025-01-01");
+        Conta3.setJuros(0.05);
+
+        var Conta9 = new ContaCorrente();
+        Conta9.setName("José Filho");
+        Conta9.setNC("333666999");
+        Conta9.setBankKC("333.666.999");
+        Conta9.setBalance("333.333.333,33$$$$$$$");
+        Conta9.setSdEsp(999999);
+
+        function ReturnConta() {
+            Conta6.Return();
+            Conta3.Return();
+            Conta9.Return();
+        }
+    </script>
+    <button onclick="ReturnConta()">Retornar as Informações</button>
+</body>
+</html>
