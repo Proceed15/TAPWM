@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos Pega Nome</title>
+    <!-- C + 1, 2, 3, 5 e 6-->
+</head>
+<body>
+    <form name="formulario1">
+        <input name="idNome" type="text" id="idNome" value="teste">
+        <button onclick="Metodos()">Clique e veja alguns métodos em ação</button>
+    </form>
+    <script>
+        function Metodos(){
+            alert("1" + document.formulario1.elements[0].value);
+            alert("2" + document.forms.formulario1.elements.idNome.value);
+            alert("3" + document.forms.formulario1.elements[0].value);
+            alert("5" + document.forms.formulario1.elements["idNome"].value);
+            alert("6" + document.getelementById("idNome"));
+        };
+    </script>
+</body>
+</html>
