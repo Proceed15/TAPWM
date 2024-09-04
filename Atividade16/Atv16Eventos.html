@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 15 + Eventos Janelas Aberta, Fechada e Quebrada</title>
+    <title>Atividade 16 + Eventos Janelas Aberta, Fechada e Quebrada</title>
 </head>
 <body>
-    
+    <div onmousedown="mDown(this)" 
+    onmouseup="mUp(this)"
+    onmousemove="mMove(this)">
+    <img height="333px" src="19193132-janela-fechada-com-um-tipo-na-paisagem-de-inverno-em-um-fundo-branco-é-isolado-ilustração.jpg">
+    Abra a Janela, Janela Fechada
+    </div>
+    <div>
+    <img onmousemove="mMove(this)" height="333px" src="janela-aberta-com-vista-para-o-jardim_540381-1223.avif">
+    Janela Aberta</div>
+    <div onmouseout="mOut(this)">
+    <img height="333px" src="pngtree-shattered-window-is-seen-in-a-wooded-area-picture-image_2781545.png"/>
+    Janela Quebrada</div>  
+    <button onclick="Reloading()">Reiniciar Animações</button>
+    <!--style="background-color:#FF69B4;width:200px;
+    height:200px;padding:40px;"-->
+<script>
+    function Reloading(){
+        window.location.reload();
+    }
+    function mDown(obj) {
+//obj.img.src="pngtree-shattered-window-is-seen-in-a-wooded-area-picture-image_2781545.png"
+//obj.style.color = "#00FFFF";
+obj.innerHTML = "Janela Quebrada";
+}
+function mUp(obj) {
+//obj.src="janela-aberta-com-vista-para-o-jardim_540381-1223.avif"
+//obj.style.color = "#ffff00";
+obj.innerHTML = "Obrigado";
+}
+function mMove(obj) {
+//obj.src="janela-aberta-com-vista-para-o-jardim_540381-1223.avif"
+//obj.style.color = "#FF0000";
+obj.innerHTML = "Janela Aberta";
+}
+function mOut(obj) {
+obj.src="19193132-janela-fechada-com-um-tipo-na-paisagem-de-inverno-em-um-fundo-branco-é-isolado-ilustração.jpg"
+//obj.style.color = "#AA3000";
+obj.innerHTML = "Janela Fechada";
+}
+</script>
 </body>
 </html>
