@@ -1,0 +1,133 @@
+17:
+Let's create the HTML and JavaScript code to achieve the desired functionality.
+
+Here's the updated HTML code:
+
+html
+Edit
+Run
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 17</title>
+</head>
+<body>
+    <input type="text" id="textInput" />
+    <input type="checkbox" id="uppercaseCheckbox" /> Maiúsculas
+    <input type="checkbox" id="lowercaseCheckbox" /> Minúsculas
+    <script src="script.js"></script>
+</body>
+</html>
+And here's the JavaScript code in a separate file script.js:
+
+javascript
+Edit
+Copy code
+const textInput = document.getElementById('textInput');
+const uppercaseCheckbox = document.getElementById('uppercaseCheckbox');
+const lowercaseCheckbox = document.getElementById('lowercaseCheckbox');
+
+textInput.addEventListener('input', () => {
+    if (uppercaseCheckbox.checked) {
+        textInput.value = textInput.value.toUpperCase();
+    } else if (lowercaseCheckbox.checked) {
+        textInput.value = textInput.value.toLowerCase();
+    }
+});
+
+uppercaseCheckbox.addEventListener('change', () => {
+    if (uppercaseCheckbox.checked) {
+        textInput.value = textInput.value.toUpperCase();
+    }
+});
+
+lowercaseCheckbox.addEventListener('change', () => {
+    if (lowercaseCheckbox.checked) {
+        textInput.value = textInput.value.toLowerCase();
+    }
+});
+Here's how the code works:
+
+We get references to the textInput, uppercaseCheckbox, and lowercaseCheckbox elements using document.getElementById.
+We add an event listener to the textInput element to listen for input changes. When the input changes, we check if either of the checkboxes is checked. If the uppercase checkbox is checked, we convert the input value to uppercase using the toUpperCase() method. If the lowercase checkbox is checked, we convert the input value to lowercase using the toLowerCase() method.
+We also add event listeners to the checkboxes to listen for changes. When a checkbox is checked or unchecked, we update the input value accordingly.
+Note that we use the input event to listen for changes to the input value, and the change event to listen for changes to the checkbox states. This ensures that the input value is updated correctly when the user types something new or checks/unchecks a checkbox.
+
+18:
+Here is the HTML code with the requested form and JavaScript function to validate the form:
+
+html
+Edit
+Run
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 18</title>
+</head>
+<body>
+    <form name="nomeform" onsubmit="return validarForm()">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="comentario">Comentário:</label>
+        <textarea id="comentario" name="comentario"></textarea><br><br>
+        <label>Pesquisa:</label>
+        <input type="radio" id="sim" name="pesquisa" value="sim">
+        <label for="sim">Sim</label>
+        <input type="radio" id="nao" name="pesquisa" value="nao">
+        <label for="nao">Não</label><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        function validarForm() {
+            var nome = document.nomeform.elements["nome"].value;
+            var email = document.nomeform.elements["email"].value;
+            var comentario = document.nomeform.elements["comentario"].value;
+            var pesquisa = document.nomeform.elements["pesquisa"].value;
+
+            if (nome.length < 10) {
+                alert("Nome deve ter no mínimo 10 caracteres.");
+                return false;
+            }
+
+            if (!email.includes("@") || !email.includes(".")) {
+                alert("Email deve ter os caracteres @ e .");
+                return false;
+            }
+
+            if (comentario.length < 20) {
+                alert("Comentário deve ter no mínimo 20 caracteres.");
+                return false;
+            }
+
+            if (pesquisa === "sim") {
+                alert("Que bom que você voltou a visitar esta página!");
+            } else {
+                alert("Volte sempre à está página!");
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
+Here's a brief explanation of the code:
+
+I created a form with the requested fields: nome, email, comentario, and pesquisa.
+I added an onsubmit event to the form that calls the validarForm() function.
+In the validarForm() function, I retrieved the values of each field using document.nomeform.elements[].
+I validated each field according to the requirements:
+nome must have at least 10 characters.
+email must contain both @ and . characters.
+comentario must have at least 20 characters.
+pesquisa is a required field, and depending on the value, it displays a different message.
+If any of the validations fail, the function returns false to prevent the form from submitting. Otherwise, it returns true.
+Let me know if you have any questions or need further clarification!
