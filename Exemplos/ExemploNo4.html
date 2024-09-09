@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM – Exemplo 4 - Ver exemplo
+        UsandoDOM2Select.html </title>
+</head>
+
+<body>
+    <select name="cidades" id="cidades" onchange="testar();">
+        <option value="sorocaba">Sorocaba</option>
+        <option value="votorantim">Votorantim</option>
+        <option value="itu">Itu</option>
+        <option value="aracoiaba">Araçoiaba da Serra</option>
+    </select>
+    <script>
+        function testar() {
+            var selecao = document.getElementById("cidades");
+            var opcaoTexto = selecao.options[selecao.selectedIndex].text;
+            var opcaoValor = selecao.options[selecao.selectedIndex].value;
+            alert(`texto: ${opcaoTexto} \n valor: ${opcaoValor}`);
+        }
+    </script>
+</body>
+
+</html>
