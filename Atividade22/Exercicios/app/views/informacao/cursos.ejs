@@ -1,0 +1,64 @@
+<html>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+    .container {
+        text-align: center;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #okButton {
+        margin-top: 20px;
+        display: none;
+    }
+</style>
+  <body>
+    <div class="container">
+      <h1>Cursos da Fatec Sorocaba</h1>
+      <select id="courseSelect" onchange="showButton()">
+          <option value="">Selecione um Curso</option>
+          <option value="https://www.fatecsorocaba.edu.br/curso_ads.asp">Análise e Desenvolvimento de Sistemas</option>
+          <option value="https://www.fatecsorocaba.edu.br/curso_fm.asp">Fabricação Mecânica</option>
+          <option value="https://www.fatecsorocaba.edu.br/curso_ea.asp">Eletrônica Automotiva</option>
+          <option value="https://www.fatecsorocaba.edu.br/curso_log.asp">Logística</option>
+          <option value="https://www.fatecsorocaba.edu.br/curso_ead-ge.asp">Gestão Empresarial - Ensino a Distância</option>
+          <option value="https://www.fatecsorocaba.edu.br/curso_gq.asp">Gestão da Qualidade</option>
+          <option value="https://www.fatecsorocaba.edu.br/curso_ma.asp">Manufatura Avançada</option>
+          <option value="https://www.fatecsorocaba.edu.br/curso_pm.asp">Processos Metalúrgicos</option>
+          <option value="https://www.fatecsorocaba.edu.br/curso_pol.asp">Polímeros</option>
+          <option value="https://www.fatecsorocaba.edu.br/curso_proj.asp">Projetos Mecânicos</option>
+          <option value="https://www.fatecsorocaba.edu.br/curso_sb.asp">Sistemas Biomédicos</option>
+      </select>
+      <br>
+      <button id="okButton" onclick="openCourse()">Clique Aqui para Saber as Informações do Curso Selecionado</button>
+      </br>
+  </div>
+  <script>
+    function showButton() {
+        const selectElement = document.getElementById("courseSelect");
+        const okButton = document.getElementById("okButton");
+        if (selectElement.value !== "") {
+            okButton.style.display = "block";
+        } else {
+            okButton.style.display = "none";
+        }
+    }
+
+    function openCourse() {
+        const selectElement = document.getElementById("courseSelect");
+        const courseLink = selectElement.value;
+        if (courseLink) {
+            window.open(courseLink, '_blank');
+        }
+    }
+</script>
+  </body>
+</html>
